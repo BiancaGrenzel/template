@@ -6,6 +6,8 @@ module.exports = {
     '@babel/preset-env',
     // Define o preset do babel para react, para poder
     // converter arquivos .jsx
-    '@babel/preset-react'
+    ['@babel/preset-react', {
+      runtime: 'automatic'
+    }]
   ]  
 }
