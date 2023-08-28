@@ -33,6 +33,11 @@ module.exports = {
             exclude: /node_mdules/,
             // O babel loader é a integração com o webpack
             use: 'babel-loader'
+        },
+        {
+            test: /\.css$/,
+            exclude: /node_mdules/,
+            use: ['style-loader', 'css-loader']
         }
        ] 
     }
