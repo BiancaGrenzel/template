@@ -3,6 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
     mode: 'development',
+    devtool: 'eval-source-map',
     // Seta o arquivo inicial
     entry: path.resolve(__dirname, 'src', 'index.jsx'),
     // Seta qual o arquivo convertido a utilizar
