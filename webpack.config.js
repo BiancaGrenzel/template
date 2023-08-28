@@ -1,6 +1,8 @@
 const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
+    mode: 'development',
     // Seta o arquivo inicial
     entry: path.resolve(__dirname, 'src', 'index.jsx'),
     // Seta qual o arquivo convertido a utilizar
@@ -11,8 +13,13 @@ module.exports = {
     resolve: {
         // Automaticamente no import de arquivos, não é necessário colocar
         // .js e .jsx no final do arquivo
-        extensions: ['.js', '.jsx']
+        extensions: ['.js', '.jsx'],
     },
+    plugins: [
+        new HtmlWebpackPlugin({
+            template: path.resolve(__dirname, 'public', 'index.html')
+        })
+    ],
     module: {
        rules: [
         {
